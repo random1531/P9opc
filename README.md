@@ -95,3 +95,4 @@ L'application suit une architecture modulaire avec :
 - **Pages** dans `src/pages/` pour chaque route
 - **Hooks personnalisés** dans `src/hooks/` pour la logique métier
 - **Données** centralisées dans `src/datas/`
+# P9opc
