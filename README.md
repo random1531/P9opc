@@ -96,3 +96,4 @@ L'application suit une architecture modulaire avec :
 - **Hooks personnalisés** dans `src/hooks/` pour la logique métier
 - **Données** centralisées dans `src/datas/`
 # P9opc
+# P9opc
