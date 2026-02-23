@@ -1,7 +1,9 @@
 import '../../styles/Footer.css'
 
+
+
 function Footer() {
-	const year = new Date().getFullYear()
+	const year: number = new Date().getFullYear()
 	const range = year === 2024 ? year : `2024 - ${year}`
 
 	return (

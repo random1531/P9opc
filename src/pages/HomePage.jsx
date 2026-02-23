@@ -1,4 +1,4 @@
-import Footer from '../components/layout/Footer'
+import Footer from '../components/layout/Footer.tsx'
 import ShoppingList from '../components/ShoppingList'
 import '../styles/Layout.css'
 

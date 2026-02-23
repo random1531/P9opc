@@ -1,7 +1,9 @@
 import Sun from '../../assets/sun.svg'
 import Water from '../../assets/water.svg'
 
-function CareScale({ scaleValue, careType }) {
+type CareScale = {scaleValue:number,careType:String}
+
+function CareScale({ scaleValue, careType }:CareScale) {
 	const range = [1, 2, 3]
 	const scaleType =
 		careType === 'light' ? (

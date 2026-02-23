@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useCart } from '../hooks/useCart'
-import Banner from './layout/Banner'
+import Banner from './layout/Banner.tsx'
 import HomePage from '../pages/HomePage'
 import CartPage from '../pages/CartPage'
 import PlantDetailPage from '../pages/PlantDetailPage'
-import NotFoundPage from '../pages/NotFoundPage'
+import NotFoundPage from '../pages/NotFoundPage.tsx'
 
 function App() {
 	const { cart, addToCart, removeFromCart, updateQuantity, clearCart, getTotal, getItemCount } = useCart()

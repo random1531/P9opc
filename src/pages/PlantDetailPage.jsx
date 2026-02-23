@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { plantList } from '../datas/plantList'
-import CareScale from '../components/ui/CareScale'
+import { plantList } from '../datas/plantList.ts'
+import CareScale from '../components/ui/CareScale.tsx'
 import '../styles/PlantDetailPage.css'
 
 function PlantDetailPage({ cart, addToCart }) {
