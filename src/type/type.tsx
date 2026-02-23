@@ -1,15 +1,15 @@
 export type Plant = {
-    name: String,
-    category: String,
-    id: String,
-    light: Number,
-    water: Number,
-    cover: String,
-    price: Number,
-    description: String
+    name: string,
+    category: string,
+    id: string,
+    light: number,
+    water: number,
+    cover: string,
+    price: number,
+    description: string
 }
 export type CartItem = {
-    name: String,
+    name: string,
     price: number,
     amount: number
 }

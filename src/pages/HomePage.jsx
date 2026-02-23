@@ -1,5 +1,5 @@
 import Footer from '../components/layout/Footer.tsx'
-import ShoppingList from '../components/ShoppingList'
+import ShoppingList from '../components/ShoppingList.tsx'
 import '../styles/Layout.css'
 
 function HomePage({ cart, addToCart }) {
