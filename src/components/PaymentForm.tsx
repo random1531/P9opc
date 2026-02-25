@@ -1,10 +1,11 @@
-import { usePayment } from '../hooks/usePayment'
-import { usePaymentForm } from '../hooks/usePaymentForm'
+import { usePayment } from '../hooks/usePayment.ts'
+import { usePaymentForm } from '../hooks/usePaymentForm.ts'
+import type {paymentDataCall,paymentDataProps} from "../type/type.tsx"
 import '../styles/PaymentForm.css'
 
 type PaymentFormProps= {
   amount:number,
-  onSuccess:(result:PaymentResponse)=> void,
+  onSuccess:(result:paymentDataProps)=> void,
   onCancel:()=>void
 }
 
@@ -35,7 +36,7 @@ function PaymentForm({ amount, onSuccess, onCancel }:PaymentFormProps) {
 
     try {
       // Appel au service de paiement
-      const paymentData = {
+      const paymentData: paymentDataCall  = {
         amount: amount,
         cardNumber: formData.cardNumber.replace(/\s/g, ''),
         expiryDate: formData.expiryDate,

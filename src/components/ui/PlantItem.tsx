@@ -8,6 +8,8 @@ type PlantItemProps = {
 	name:string,
 	price:number,
 	id:string,
+	water:number,
+	light:number
 	onAddToCart: () => void
 }
 

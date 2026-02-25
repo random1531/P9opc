@@ -1,5 +1,18 @@
+type paymentDataProps = {
+  amount:number,
+  success:boolean,
+  currency:string,
+  status:string,
+  timestamp:string,
+  transactionId:string
+}
+type paymentMethodProps ={
+  cardNumber:string,
+expiryDate:string,
+cvv:string
+}
 export class PaymentService {
-  static async processPayment(paymentData) {
+  static async processPayment(paymentData:paymentDataProps) {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // Simulation d'un paiement réussi ou refusé
@@ -23,7 +36,7 @@ export class PaymentService {
     }
   }
 
-  static async validatePaymentMethod(paymentMethod) {
+  static async validatePaymentMethod(paymentMethod:paymentMethodProps) {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const isValid =

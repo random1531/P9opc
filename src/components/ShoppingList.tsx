@@ -13,7 +13,7 @@ type handleAddToCart = (name:string,price:number)=>void
 
 function ShoppingList({ cart, addToCart }:ShoppingListProps) {
 	const [activeCategory, setActiveCategory] = useState('')
-	const categories = plantList.reduce(
+	const categories = plantList.reduce<string[]>(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
 		[]
