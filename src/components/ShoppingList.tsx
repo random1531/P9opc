@@ -3,13 +3,13 @@ import { plantList } from '../datas/plantList.ts'
 import PlantItem from './ui/PlantItem.tsx'
 import Categories from './Categories.tsx'
 import '../styles/ShoppingList.css'
-import type { CartItem } from '../type/type.tsx'
+import type { CartItem,Plant } from '../type/type.tsx'
 
 type ShoppingListProps ={
 	cart:CartItem[],
-	addToCart:(name:string,price:number)=>void
+	addToCart:(plant:Plant)=>void
 }
-type handleAddToCart = (name:string,price:number)=>void
+
 
 function ShoppingList({ cart, addToCart }:ShoppingListProps) {
 	const [activeCategory, setActiveCategory] = useState('')
@@ -19,8 +19,8 @@ function ShoppingList({ cart, addToCart }:ShoppingListProps) {
 		[]
 	)
 
-	const handleAddToCart:handleAddToCart = (name, price) => {
-		addToCart( name, price )
+	const handleAddToCart = (plant:Plant) => {
+		addToCart(plant)
 	}
 
 	return (
@@ -32,7 +32,7 @@ function ShoppingList({ cart, addToCart }:ShoppingListProps) {
 			/>
 
 			<ul className='lmj-plant-list'>
-				{plantList.map(({ id, cover, name, water, light, price, category }) =>
+				{plantList.map(({ id, cover, name, water, light, price, category,description }) =>
 					!activeCategory || activeCategory === category ? (
 						<li key={id}>
 							<PlantItem
@@ -42,7 +42,15 @@ function ShoppingList({ cart, addToCart }:ShoppingListProps) {
 								water={water}
 								light={light}
 								price={price}
-								onAddToCart={() => handleAddToCart(name, price)}
+								onAddToCart={() => handleAddToCart({
+                      id,
+                      cover,
+                      name,
+                      water,
+                      light,
+                      price,
+                      category,description
+                    })}
 							/>
 						</li>
 					) : null

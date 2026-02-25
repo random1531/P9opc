@@ -4,7 +4,13 @@ import CareScale from '../components/ui/CareScale.tsx'
 import type { Plant,CartItem } from '../type/type.tsx'
 import '../styles/PlantDetailPage.css'
 
-function PlantDetailPage({ cart, addToCart }:{cart:CartItem,addToCart:(name:string)=>void}) {
+type PlantDetailPageProps ={
+	cart:CartItem[],
+	addToCart:(plant:Plant)=>void
+}
+
+
+function PlantDetailPage({ cart, addToCart }:PlantDetailPageProps) {
 	const { id } = useParams()
 	const navigate = useNavigate()
 	
@@ -16,7 +22,7 @@ function PlantDetailPage({ cart, addToCart }:{cart:CartItem,addToCart:(name:stri
 	}
 	
 	const handleAddToCart = () => {
-		addToCart(plant.name)
+		addToCart(plant)
 	}
 	
 	const getCategoryLabel = (category:string) => {

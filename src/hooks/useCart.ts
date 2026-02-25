@@ -23,7 +23,7 @@ export const useCart = () => {
 
 
 
-  const addToCart = (plant:Plant) => {
+  const addToCart = (plant:Plant):void => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.name === plant.name);
 

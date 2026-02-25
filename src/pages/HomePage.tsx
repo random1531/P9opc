@@ -3,7 +3,13 @@ import ShoppingList from '../components/ShoppingList.tsx'
 import '../styles/Layout.css'
 import type { CartItem,Plant } from '../type/type.tsx'
 
-function HomePage({ cart, addToCart }:{cart:CartItem[],addToCart:(name:string,price:number)=>void}) {
+type HomePageProps ={
+	cart:CartItem[],
+	addToCart:(plant:Plant)=>void
+}
+
+
+function HomePage({ cart, addToCart }:HomePageProps) {
 	return (
 		<div>
 			<div className='lmj-layout-inner'>
