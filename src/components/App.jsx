@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { useCart } from '../hooks/useCart'
+import { useCart } from '../hooks/useCart.js'
 import Banner from './layout/Banner.tsx'
-import HomePage from '../pages/HomePage'
-import CartPage from '../pages/CartPage'
-import PlantDetailPage from '../pages/PlantDetailPage'
+import HomePage from '../pages/HomePage.jsx'
+import CartPage from '../pages/CartPage.jsx'
+import PlantDetailPage from '../pages/PlantDetailPage.jsx'
 import NotFoundPage from '../pages/NotFoundPage.tsx'
 
 function App() {

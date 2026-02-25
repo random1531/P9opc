@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import PaymentForm from '../components/PaymentForm'
+import PaymentForm from '../components/PaymentForm.tsx'
 import '../styles/CartPage.css'
 
 function CartPage({ cart, clearCart, updateQuantity }) {
